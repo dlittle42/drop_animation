@@ -6,23 +6,15 @@ body {
   height: 100vh;
   margin: 0;
   width: 100vw;
+  -webkit-touch-callout: none; 
+  -webkit-text-size-adjust: none; 
+  -webkit-user-select: none;
+  -webkit-highlight: none; 
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
-}
+
+
 
 .browsehappy {
     margin: 0.2em 0;
@@ -72,8 +64,9 @@ body {
     animation-iteration-count: infinite;
     animation-name: bloopin;
     
-     transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: scale(1);
+    opacity: 1;
     
      &:hover {
       
@@ -85,6 +78,10 @@ body {
     //  animation: animation 800ms ease-in-out 0s 2 alternate;
       transform: scale(.2);
       
+    }
+
+    &.disappear {
+      opacity: 0;
     }
     
   }
@@ -104,24 +101,16 @@ body {
     transform: scale(1);
     
     &:hover {
-      
-      // background-color:blue;
-     //   -webkit-animation: animation 800ms linear both;
-     //   animation: animation 800ms linear both;
-      
-     // -webkit-animation: animation 800ms ease-in-out 0s 2 alternate;
-    //  animation: animation 800ms ease-in-out 0s 2 alternate;
       transform: scale(1.5);
       
     }
+
+    &.clicktouch{
+        transform: scale(0.5);
+    }
   }
 
-  &:hover {
-    //background-color:blue;
-    //  -webkit-animation: bounceOut 1000ms linear both;
-    //  animation: bounceOut 1000ms linear both;
 
-  }
    &.on-screen {
      -webkit-animation: animation 1000ms linear both;
       animation: animation 1000ms linear both;
@@ -133,57 +122,6 @@ body {
     opacity: 0;
   }
 }
-/*
-.bloop-ring{
-  background-color: none;
-  border-radius: 100px;
-  border: solid 4px #ffcc33;
-  height: 100px;
-  left: 296px;
-  position: absolute;
-  top: 296px;
-  width: 100px;
-    transition: all 1s;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    animation-name: bloopin;
-}
-
-.bloop-inner {
-  background-color: #ffcc33;
-  border-radius: 100px;
-  //box-shadow: 0 0 6px #000;
-  height: 100px;
-  left: 300px;
-  position: absolute;
-  top: 300px;
-  width: 100px;
-}
-
-.animation-ring {
-  background-color: none;
-  border-radius: 100px;
-  border: solid 4px #ffcc33;
-  height: 100px;
-  left: 296px;
-  position: absolute;
-  top: 296px;
-  width: 100px;
-}
-
-.animation-ring {
-  -webkit-animation: animationring 1000ms linear infinite both;
-  animation: animationring 1000ms linear infinite both;
-}
-*/
-
-/* Generated with Bounce.js. Edit at http://goo.gl/qFmx4E */
-
-
-
-
-
-
 
 
 @keyframes animation { 
